@@ -1,0 +1,14 @@
+The ksh sources in the top-level directory are believed to be
+entirely in the public domain.  See the file LEGAL for details.
+
+The contents of the openbsd-lib directory have come from the OpenBSD
+source tree and may be subject to copyright.  See
+http://www.openbsd.org/policy.html and copyright notices in the
+individual files for details.
+
+Changes to build on Darwin after extracting from the OpenBSD source
+tree were made by Dave Vandervies and are dedicated to the public
+domain.  In jurisdictions that do not recognize the right of authors
+to dedicate their work to the public domain, these changes may be
+used under the terms of Creative Commons Zero; see
+https://creativecommons.org/publicdomain/zero/1.0/ for details.
