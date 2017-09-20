@@ -114,7 +114,7 @@ static const char *initcoms [] = {
 	NULL
 };
 
-char username[_PW_NAME_LEN + 1];
+char username[32];
 
 #define version_param  (initcoms[2])
 
@@ -152,11 +152,13 @@ main(int argc, char *argv[])
 
 	kshname = argv[0];
 
+#if 0
 	if (pledge("stdio rpath wpath cpath fattr flock getpw proc exec tty",
 	    NULL) == -1) {
 		perror("pledge");
 		exit(1);
 	}
+#endif
 
 	ainit(&aperm);		/* initialize permanent Area */
 

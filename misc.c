@@ -303,9 +303,9 @@ change_flag(enum sh_flag f,
 	if (f == FPRIVILEGED && oldval && !newval) {
 		gid_t gid = getgid();
 
-		setresgid(gid, gid, gid);
+		setregid(gid, gid);
 		setgroups(1, &gid);
-		setresuid(ksheuid, ksheuid, ksheuid);
+		setreuid(ksheuid, ksheuid);
 	} else if (f == FPOSIX && newval) {
 #ifdef BRACE_EXPAND
 		Flag(FBRACEEXPAND) = 0
