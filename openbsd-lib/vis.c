@@ -36,6 +36,8 @@
 #include <stdlib.h>
 #include <vis.h>
 
+#include <reallocarray.h>
+
 #define	isoctal(c)	(((u_char)(c)) >= '0' && ((u_char)(c)) <= '7')
 #define	isvisible(c,flag)						\
 	(((c) == '\\' || (flag & VIS_ALL) == 0) &&			\

@@ -24,6 +24,8 @@
 #include <unistd.h>
 #include <vis.h>
 
+#include "openbsd-lib/timespeccmp.h"
+
 #include "sh.h"
 
 #ifdef HISTORY
@@ -663,7 +665,7 @@ histsave(int lno, const char *cmd, int dowrite)
 
 		history_lock(LOCK_EX);
 		if (fstat(fileno(histfh), &sb) != -1) {
-			if (timespeccmp(&sb.st_mtim, &last_sb.st_mtim, ==))
+			if (timespeccmp(&sb.st_mtimespec, &last_sb.st_mtimespec, ==))
 				; /* file is unchanged */
 			else {
 				histreset();
